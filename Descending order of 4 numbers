@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class hello
+{
+	public static void main(String[] args) {
+	   Scanner scan = new Scanner(System.in);
+       int a=scan.nextInt();
+       int b=scan.nextInt();
+       int c=scan.nextInt();
+       int d=scan.nextInt();
+       int first,second,third,fourth;
+       if(a>b && a>c && a>d) first =a;
+       else if(b>a &&  b>c && b>d)first=b;
+       else if(c>a && c>b && c>d)first=c;
+       else first=d;
+
+       if(a<=b && a<=c && a<=d) fourth=a;
+       else if(b<=a && b<=c && b<=d)fourth=b;
+       else if(c<=a && c<=b && c<=d)fourth=c;
+       else fourth=d;
+
+       int sum=a+b+c+d;
+       int secondthirdsum=sum-first-fourth;
+
+       if(a!=first && a!=fourth)second=a;
+       else if(b!=first && b!=fourth)second=b;
+       else if(c!=first && c!=fourth)second=c;
+       else second=d;
+        third =secondthirdsum-second;
+
+        System.out.print(first+" " +second+" "+third+" "+fourth+" ");
+        
+   }
+}
+
+       
+       
